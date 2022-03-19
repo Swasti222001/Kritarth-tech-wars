@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+}
+
+.community{
+  background-image:url(Homepage-Shelter.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.communityHeading{
+  font-size: 4rem;
+  font-weight: bold;
+
+}
