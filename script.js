@@ -1,5 +1,6 @@
 $("#hamburger").click(function(){
   $("#sidebar").toggleClass("sidebar_close")
+  $("#sidebar").toggleClass("sidebar_mob")
   $(".item_one").toggleClass("item_none")
   $(".item_two").toggleClass("item_none")
   $(".hamburger_item").toggleClass("item_none")
@@ -8,6 +9,7 @@ $("#hamburger").click(function(){
 
 $(".item_one").click(function(){
   $("#sidebar").toggleClass("sidebar_close")
+  $("#sidebar").toggleClass("sidebar_mob")
   $(".item_one").toggleClass("item_none")
   $(".item_two").toggleClass("item_none")
   $(".hamburger_item").toggleClass("item_none")
@@ -25,5 +27,25 @@ $('.count').each(function () {
     });
 });
 
-var tl = gsap.timeline({ repeat: -1 });
-tl.to("h1", 30, { backgroundPosition: "-960px 0" });
+// var tl = gsap.timeline({ repeat: -1 });
+// tl.to("h1", 30, { backgroundPosition: "-960px 0" });
+
+jQuery(function($) {
+
+  var $nav = $('.sidebar_cont');
+  var $win = $(window);
+  var winH = $win.height();   // Get the window height.
+
+  $win.on("scroll", function () {
+      if ($(this).scrollTop() > winH ) {
+          $nav.addClass("sidebar_cont_visible");
+          $nav.addClass("hamburger_mob");
+      } else {
+          $nav.removeClass("sidebar_cont_visible");
+          $nav.removeClass("hamburger_mob");
+      }
+  }).on("resize", function(){ // If the user resizes the window
+     winH = $(this).height(); // you'll need the new height value
+  });
+
+});
