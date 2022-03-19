@@ -9,19 +9,49 @@
 } */
 
 .community {
-  background-image: url(Homepage-Shelter.png);
+
+  background-image: url(./Homepage-Shelter.png);
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 500px;
+  height: 100vh;
   margin-top: 2rem;
-  text-align: center;
+  display: flex;
+  justify-content: space-around;
+
 }
 
 .communityHeading {
   font-size: 4rem;
   font-weight: bold;
+  text-align: center;
+
+
 }
+
+.commone,
+.commtwo {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.makediffmain {
+
+  padding: 4rem;
+  background-color:rgb(245, 242, 229);
+
+}
+
+
+.wrapper {
+  display: flex;
+  height: 50vh;
+  justify-content: center;
+  align-items: center;
+}
+
+
 
 .sidebar_cont {
   position: fixed;
@@ -119,5 +149,68 @@
 @media only screen and (max-width: 500px) {
   .sidebar_cont {
     width: 100%;
+  }
+}
+
+.title {
+  background-image: url(https://cdn.pixabay.com/photo/2017/07/03/20/17/abstract-2468874_960_720.jpg);
+  background-attachment: fixed;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  max-width: 75%;
+  font-size: 4rem;
+  font-weight: bold;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  color: #540032;
+}
+
+
+
+.makediff {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  /* margin: 6rem; */
+}
+
+.mycls {
+
+  padding: 60px;
+  background-image: linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(90deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0), linear-gradient(180deg, #000 50%, transparent 0);
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 30px 1px, 30px 1px, 1px 30px, 1px 30px;
+  width: 20rem;
+  font-size: 2.5rem;
+  font-family: 'Trebuchet MS', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(247, 201, 203);
+  animation-play-state: paused;
+  margin-bottom: 6rem;
+}
+
+.mycls:hover {
+  animation: move1 .4s infinite normal;
+  animation-timing-function: linear;
+}
+
+@keyframes move1 {
+  0% {
+    background-position: 0 0, 0 100%, 0 0, 100% 0;
+  }
+
+  100% {
+    background-position: 30px 0, -30px 100%, 0 -30px, 100% 30px;
+  }
+}
+
+@media only screen and (max-width:1237px) {
+  .mycls {
+    width: 100%;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
   }
 }
